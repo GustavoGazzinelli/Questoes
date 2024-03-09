@@ -1,1 +1,20 @@
 https://replit.com/@GustavoGazzinel/Q-2
+
+#include <stdio.h>
+#include <string.h>
+
+#define SIZE 100
+
+int main(void) {
+  int i, tamanho;
+  char palavra[SIZE];
+  printf("Digite uma palavra: "); scanf("\n%[^\n]", palavra);
+  if (palavra[SIZE - 1] == '\n')
+    palavra[SIZE - 1] = '\0';
+  tamanho = strlen(palavra);
+  printf("A palavra ao contrario é: ");
+  for (i = tamanho; i >= 0; i--) {
+    printf("%c", palavra[i]);
+  }
+  return 0;
+}
